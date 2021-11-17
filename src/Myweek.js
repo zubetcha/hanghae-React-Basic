@@ -20,18 +20,8 @@ const Myweek = (props) => {
                     <div key={index} style={{display: "flex"}}>
                         <Day>{day}</Day>
                         <Circle />
-                        <div 
-                        onClick={() => { history.push("/detail/:days")}}
-                        style={{
-                            width: "0px",
-                            height: "0px",
-                            margin: "10px",
-                            borderTop: "20px solid transparent",
-                            borderBottom: "20px solid transparent",
-                            borderRight: "20px solid none",
-                            borderLeft: "30px solid seagreen",
-                            cursor: "pointer",
-                        }}></div>
+                        <Detail onClick={() => { history.push("/detail")}}>
+                        </Detail>
                     </div>
                 );
             })}
@@ -49,6 +39,17 @@ const Day = styled.div`
     vertical-align: middle;
     line-height: 64px;
     margin-left: 10px;
+`;
+
+const Detail = styled.div`
+    width: 0px;
+    height: 0px;
+    margin: 10px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    borderright: 20px solid none;
+    border-left: 30px solid seagreen;
+    cursor: pointer;
 `;
 
 export default Myweek;

@@ -67,9 +67,12 @@ const Complete = styled.button`
     height: 40px;
     margin: 20px auto;
 
+    font-size: 14px;
     cursor: pointer;
 `;
 
+// url 파라미터를 dayday의 요소로 가져와서
+// if url 파라미터와 dayday[i]가 일치하면 dayday[i] 출력
 
 
 export default Detail;
